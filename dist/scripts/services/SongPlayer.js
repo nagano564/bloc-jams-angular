@@ -17,10 +17,10 @@
             });
                  
             currentBuzzObject.bind('timeupdate', function() {
-         $rootScope.$apply(function() {
-             SongPlayer.currentTime = currentBuzzObject.getTime();
-         });
-     });
+                 $rootScope.$apply(function() {
+                     SongPlayer.currentTime = currentBuzzObject.getTime();
+                 });
+             });
             
 
             SongPlayer.currentSong = song;
