@@ -1,8 +1,9 @@
  (function() {
      function Fixtures() {
          var Fixtures = {};
-         
+
          var albumPicasso = {
+            id: 1,
             title: 'The Colors',
             artist: 'Pablo Picasso',
             label: 'Cubism',
@@ -16,8 +17,9 @@
                  { title: 'Magenta', duration: '374.22', audioUrl: '/assets/music/magenta' },
          ]
      };
- 
+
         var albumMarconi = {
+             id: 2,
              title: 'The Telephone',
              artist: 'Guglielmo Marconi',
              label: 'EM',
@@ -31,21 +33,26 @@
                  { title: 'Wrong phone number', duration: '2:15' }
          ]
      };
-         
-         Fixtures.getAlbum = function(){
-             return albumPicasso;
+
+     var albumsArr = [
+       albumPicasso,
+       albumMarconi
+     ];
+
+         Fixtures.getAlbum = function(id){
+             id *= 1;
+             return albumsArr.find(function(album){
+               return album.id === id;
+             });
          };
-         
-         Fixtures.getCollection = function(numberOfAlbums){
-            var albumsArr = []
-             for (var i = 0; i < numberOfAlbums; i++){
-                 albumsArr.push(albumPicasso);
-             }return albumsArr;
+
+         Fixtures.getCollection = function(){
+            return albumsArr;
          };
-         
+
          return Fixtures;
      }
- 
+
      angular
          .module('blocJams')
          .factory('Fixtures', Fixtures);
