@@ -18,25 +18,25 @@
          ]
      };
 
-        var albumMarconi = {
-             id: 2,
-             title: 'The Telephone',
-             artist: 'Guglielmo Marconi',
-             label: 'EM',
-             year: '1909',
-             albumArtUrl: '/assets/images/album_covers/20.png',
-             songs: [
-                 { title: 'Hello, Operator?', duration: '1:01' },
-                 { title: 'Ring, ring, ring', duration: '5:01' },
-                 { title: 'Fits in your pocket', duration: '3:21' },
-                 { title: 'Can you hear me now?', duration: '3:14' },
-                 { title: 'Wrong phone number', duration: '2:15' }
+         var albumJake = {
+            id: 2,
+            title: 'Miles Away',
+            artist: 'Jake Incao',
+            label: 'Cubism',
+            year: '2000',
+            albumArtUrl: '/assets/images/album_covers/jake.jpeg',
+            songs: [
+                 { title: 'Gloria', duration: '161.71', audioUrl: '/assets/music/blue' },
+                 { title: 'Miles Away', duration: '103.96', audioUrl: '/assets/music/green' },
+                 { title: 'Til the Heavans Cry', duration: '268.45', audioUrl: '/assets/music/red' },
+                 { title: 'Someday', duration: '153.14', audioUrl: '/assets/music/pink' },
+                 { title: 'Mind Wide Open', duration: '374.22', audioUrl: '/assets/music/magenta' },
          ]
      };
 
      var albumsArr = [
        albumPicasso,
-       albumMarconi
+       albumJake
      ];
 
          Fixtures.getAlbum = function(id){
