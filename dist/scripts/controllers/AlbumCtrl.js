@@ -3,6 +3,7 @@
        console.log($stateParams);
        this.albumData = Fixtures.getAlbum($stateParams.id);
        this.songPlayer = SongPlayer;
+       this.songPlayer.setAlbum(this.albumData);
        console.log(this.albumData);
      }
 
